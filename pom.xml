@@ -9,7 +9,10 @@
     <modules>
         <!--微服务提供者-->
         <module>cloud-provider-payment8001</module>
+        <!--微服务消费者-->
         <module>cloud-consumer-order80</module>
+        <!--公共工具类-->
+        <module>cloud-api-commons</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -88,6 +91,12 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
 <!--                <optional>true</optional>-->
+            </dependency>
+            <!--公共工具类-->
+            <dependency>
+                <groupId>com.springcloud</groupId>
+                <artifactId>cloud-api-commons</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

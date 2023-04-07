@@ -36,11 +36,6 @@
         <!--            <version>2.1.5.RELEASE</version>-->
         <!--        </dependency>-->
         <!--公共类,工具包api编译打包到本地仓库-->
-<!--        <dependency>-->
-<!--            <groupId>com.springcloud_1</groupId>-->
-<!--            <artifactId>cloud-api-commons</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -69,6 +64,10 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
         </dependency>
     </dependencies>
 
