@@ -13,6 +13,10 @@
         <module>cloud-consumer-order80</module>
         <!--公共工具类-->
         <module>cloud-api-commons</module>
+        <!--eureka服务注册7001-->
+        <module>cloud-eureka-server7001</module>
+        <!--eureka服务注册7001-->
+        <module>cloud-eureka-server7002</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -92,7 +96,9 @@
                 <version>${lombok.version}</version>
 <!--                <optional>true</optional>-->
             </dependency>
-            <!--公共工具类-->
+            <!--公共工具类
+
+            -->
             <dependency>
                 <groupId>com.springcloud</groupId>
                 <artifactId>cloud-api-commons</artifactId>
