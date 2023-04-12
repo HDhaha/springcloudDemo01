@@ -17,6 +17,7 @@
         <module>cloud-eureka-server7001</module>
         <!--eureka服务注册7001-->
         <module>cloud-eureka-server7002</module>
+        <module>cloud-provider-payment8002</module>
     </modules>
 
     <packaging>pom</packaging>
