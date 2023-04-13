@@ -17,8 +17,8 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping(value = "/consumer/payment")
 public class ConsumerPaymentController {
-    private final static String PAYMENT_URL="http://localhost:8001/payment";
-//    private final static String PAYMENT_URL="http://CLOUD-PAYMENT-SERVICE/payment";
+//    private final static String PAYMENT_URL="http://localhost:8001/payment";
+    private final static String PAYMENT_URL="http://PAYMENT-SERVICE/payment";
 
 //    @Resource
 //    private DiscoveryClient discoveryClient;
