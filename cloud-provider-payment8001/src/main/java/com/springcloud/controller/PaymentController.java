@@ -5,6 +5,8 @@ import com.springcloud.domain.Payment;
 import com.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -23,8 +25,8 @@ public class PaymentController {
     private PaymentService paymentService;
     @Value("${server.port}")
     private String serverPort;
-//    @Resource
-//    private DiscoveryClient discoveryClient;
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     /**
      * RequestBody  表示传递的参数格式为json  ,如果要直接访问的话,参数需要以json格式请求
@@ -75,15 +77,18 @@ public class PaymentController {
         return CommenResult.toCommentResult(i);
     }
 
-//    @GetMapping(value = "/discoveryClient")
-//    public Object discoveryClient() {
-//        //获取到所有服务
-//        List<String> services = discoveryClient.getServices();
-//        services.forEach(service -> System.out.println("******service******" + service));
-//        //获取到指定服务的实例
-//        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-//        instances.forEach(instance -> System.out.println(instance.getInstanceId() + "\t" + instance.getPort() + "\t" +
-//                instance.getHost() + "\t" + instance.getUri()));
-//        return discoveryClient;
-//    }
+    @GetMapping(value = "/discoveryClient")
+    public Object discoveryClient() {
+        //获取到所有服务
+        List<String> services = discoveryClient.getServices();
+        services.forEach(service -> {
+            System.out.println("******service******" + service);
+            //获取到指定服务的实例
+            List<ServiceInstance> instances = discoveryClient.getInstances(service);
+            instances.forEach(instance -> System.out.println(instance.getInstanceId() + "\t" + instance.getPort() + "\t" +
+                    instance.getHost() + "\t" + instance.getUri()));
+        });
+
+        return discoveryClient;
+    }
 }
