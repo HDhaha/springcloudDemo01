@@ -1,0 +1,10 @@
+server:
+  port: 80
+
+
+spring:
+  application:
+    name: cloud-zk-order-service
+  cloud:
+    zookeeper:
+      connect-string: 192.168.53.123:2181     #linux 服务器zookeeper

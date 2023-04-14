@@ -1,6 +1,6 @@
 #8004表示注册到zookeeper服务器的支付服务提供者端口号
 server:
-  port: 8004
+  port: 8005
 #服务别名----注册zookeeper到注册中心名称
 spring:
   application:
@@ -9,7 +9,7 @@ spring:
     zookeeper:
       connect-string: 192.168.53.123:2181     #linux 服务器zookeeper
       discovery:
-        instance-id: payment8004
+        instance-id: payment8005
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: com.mysql.cj.jdbc.Driver             # mysql驱动包 com.mysql.jdbc.Driver

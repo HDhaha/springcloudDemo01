@@ -7,9 +7,9 @@
     <artifactId>springcloudDemo01</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <!--微服务提供者-->
+        <!--Eureka微服务提供者8001-->
         <module>cloud-provider-payment8001</module>
-        <!--微服务消费者-->
+        <!--Eureka微服务消费者-->
         <module>cloud-consumer-order80</module>
         <!--公共工具类-->
         <module>cloud-api-commons</module>
@@ -17,9 +17,16 @@
         <module>cloud-eureka-server7001</module>
         <!--eureka服务注册7001-->
         <module>cloud-eureka-server7002</module>
+        <!--Eureka微服务提供者8002-->
         <module>cloud-provider-payment8002</module>
-        <!---->
+        <!--Zookeeper微服务提供者8004-->
         <module>cloud-provider-zk-payment8004</module>
+        <!--Zookeeper微服务消费者-->
+        <module>cloud-consumer-zookeeper-order80</module>
+        <!--Zookeeper微服务提供者8005-->
+        <module>cloud-provider-zk-payment8005</module>
+        <!--Consul微服务提供者8006-->
+        <module>cloud-provider-consul-payment8006</module>
     </modules>
 
     <packaging>pom</packaging>
