@@ -22,6 +22,8 @@ public class ConsumerPaymentController {
     @GetMapping(value = "/consul")
     public String getPayment(){
         System.out.println("测试第一次提交");
+        System.out.println("测试第二次提交");
+        System.out.println("测试第三次提交");
         return restTemplate.getForObject(PAYMENT_URL+"/payment/consul",String.class);
     }
 
