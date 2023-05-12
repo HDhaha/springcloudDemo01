@@ -33,6 +33,8 @@
         <module>cloud-provider-consul-payment8006</module>
         <!--Consul微服务消费者-->
         <module>cloud-consumer-consul-order80</module>
+        <!--自我测试，多数据源模式-->
+        <module>datasources</module>
     </modules>
 
     <packaging>pom</packaging>
