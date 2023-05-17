@@ -19,7 +19,6 @@ public class MyTestServiceImpl implements MyTestService {
     private MyTestMapper testMapper;
     @Override
     public void test() {
-        DataSourceUtil.setDB("db2");
         List<String> objects = testMapper.queryAna();
         for (Object object : objects) {
             System.out.println(object);
