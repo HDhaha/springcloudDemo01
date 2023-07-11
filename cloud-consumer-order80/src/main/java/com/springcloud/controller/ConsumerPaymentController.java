@@ -70,4 +70,11 @@ public class ConsumerPaymentController {
         //获取到   CLOUD-PAYMENT-SERVICE (提供者) 相应的实例
         return restTemplate.getForObject(PAYMENT_URL+"/custom/lb",String.class);
     }
+
+
+    public void testPush(){
+        System.out.println("第一次提交");
+        System.out.println("第二次提交");
+        System.out.println("第三次提交");
+    }
 }
